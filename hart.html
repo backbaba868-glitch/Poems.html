@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>तपाईंको लागि एउटा सरप्राइज!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffe3e8;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        /* खामको बक्स */
+        .envelope-wrapper {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .envelope {
+            position: relative;
+            width: 280px;
+            height: 180px;
+            background-color: #f08080;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            transition: transform 0.4s ease;
+        }
+
+        /* खामको माथिको त्रिकोण भाग */
+        .envelope::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            z-index: 3;
+            border-top: 100px solid #f08080;
+            border-left: 140px solid transparent;
+            border-right: 140px solid transparent;
+            transform-origin: top;
+            transition: transform 0.4s ease 0.4s;
+        }
+
+        /* खामको भित्री भागको डिजाइन */
+        .envelope::after {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            width: 0;
+            height: 0;
+            border-top: 90px solid transparent;
+            border-left: 140px solid #f49797;
+            border-right: 140px solid #f49797;
+            border-bottom: 90px solid #f49797;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+
+        /* भित्रको गोप्य चिठ्ठी */
+        .letter {
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+            width: 240px;
+            height: 150px;
+            background-color: white;
+            border-radius: 4px;
+            z-index: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            transition: transform 0.4s ease, z-index 0.4s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .letter h2 {
+            font-size: 1.2rem;
+            color: #d14949;
+            margin-bottom: 10px;
+        }
+
+        .letter p {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        /* खामको बीचको सानो मुटु स्टिकर */
+        .heart-sticker {
+            position: absolute;
+            top: 45%;
+            left: 45%;
+            width: 30px;
+            height: 30px;
+            background-color: #d14949;
+            transform: rotate(-45deg);
+            z-index: 4;
+            transition: transform 0.4s ease;
+        }
+        .heart-sticker::before, .heart-sticker::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #d14949;
+            border-radius: 50%;
+        }
+        .heart-sticker::before { top: -15px; left: 0; }
+        .heart-sticker::after { left: 15px; top: 0; }
+
+        /* खाम खुल्दा खेरिको एनिमेसन इफेक्ट */
+        .envelope-wrapper.open .envelope::before {
+            transform: rotateX(180deg);
+            z-index: 0;
+        }
+
+        .envelope-wrapper.open .letter {
+            transform: translateY(-90px);
+            z-index: 2;
+            /* यहाँ चिठ्ठी बाहिर निस्केपछि माथि बस्छ */
+            transition-delay: 0.4s;
+        }
+
+        .envelope-wrapper.open .heart-sticker {
+            transform: rotate(-45deg) scale(0);
+        }
+
+        /* मुटु धड्किने सानो इफेक्ट */
+        .hint {
+            position: absolute;
+            top: -40px;
+            width: 100%;
+            text-align: center;
+            color: #d14949;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="envelope-wrapper" onclick="toggleEnvelope()">
+        <div class="hint">मलाई खोल्नुहोस्! 💌</div>
+        <div class="envelope">
+            <div class="letter">
+                <!-- तपाईं यहाँ आफ्नो म्यासेज फेर्न सक्नुहुन्छ -->
+                <h2>नमस्ते प्रिय! ❤️</h2>
+                <p>तपाईं मेरो जीवनको सबैभन्दा सुन्दर उपहार हुनुहुन्छ। सधैं यसरी नै मुस्कुराइरहनू।</p>
+            </div>
+            <div class="heart-sticker"></div>
+        </div>
+    </div>
+
+    <script>
+        function toggleEnvelope() {
+            document.querySelector('.envelope-wrapper').classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
+
