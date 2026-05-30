@@ -11,7 +11,185 @@
     </style>
 </head>
 <body>
+   <div class="profile-card">
+    <div class="profile-header">
+        <div class="profile-img-container">
+            <!-- तपाईंको फोटोको लिङ्क यहाँ राख्नुहोला (src) -->
+            <img src="https://i.imgur.com/X7Ff8qT.jpeg" alt="सिर्जन भट्टराई" class="profile-img">
+        </div>
+    </div>
 
+    <div class="profile-body">
+        <!-- नामसँगै साहित्यिक कलमको लोगो (Logo/Icon) -->
+        <h1 class="profile-name">
+            <i class="fas fa-feather-alt poetry-logo"></i> सिर्जन भट्टराई
+        </h1>
+        <p class="profile-title">कवि / शायर</p>
+        
+        <p class="profile-bio">
+            "कागजको पानामा मनका रङ्गहरू पोत्दै, भावनाका तरंगहरूलाई शब्दको मालामा उनेर एउटा आफ्नै संसार सिर्जना गर्ने प्रयास।"
+        </p>
+
+        <!-- विधा: कविता र शायरी मात्र -->
+        <div class="poetry-tags">
+            <span class="tag"><i class="fas fa-pen-nib"></i> #कविता</span>
+            <span class="tag"><i class="fas fa-heart"></i> #शायरी</span>
+        </div>
+
+        <div class="profile-socials">
+            <a href="#" class="social-btn facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:your-email@example.com" class="social-btn envelope" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+
+        <div class="profile-footer">
+            <a href="#" class="btn-contact">कविता संसारमा प्रवेश गर्नुहोस</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    .profile-card {
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 100%;
+        max-width: 420px;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        margin: 20px auto;
+    }
+
+    .profile-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 40px 20px;
+    }
+
+    .profile-img-container {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: #fff;
+        padding: 5px;
+        margin: 0 auto;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .profile-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        background: #e0e0e0;
+    }
+
+    .profile-body {
+        padding: 30px 25px;
+    }
+
+    .profile-name {
+        font-size: 26px;
+        color: #333;
+        font-weight: 700;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* लोगो स्टाइल (Logo Style) */
+    .poetry-logo {
+        color: #764ba2;
+        font-size: 22px;
+    }
+
+    .profile-title {
+        font-size: 14px;
+        color: #764ba2;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    .profile-bio {
+        font-size: 15px;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        font-style: italic;
+        background: #f9f9f9;
+        padding: 15px;
+        border-left: 4px solid #764ba2;
+        border-radius: 4px;
+    }
+
+    .poetry-tags {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+    }
+
+    .tag {
+        background: #eeeef8;
+        color: #764ba2;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .profile-socials {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .social-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #f0f0f0;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .social-btn.facebook:hover { background: #3b5998; color: #fff; }
+    .social-btn.instagram:hover { background: #e1306c; color: #fff; }
+    .social-btn.envelope:hover { background: #4ba276; color: #fff; }
+
+    .btn-contact {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+        transition: transform 0.2s ease;
+    }
+
+    .btn-contact:hover {
+        transform: scale(1.03);
+    }
+        </style>
+    
     <h1>सिर्जन भट्टराईको कविता सङ्ग्रह</h1>
 
     <!-- १ देखि २८ सम्म -->
