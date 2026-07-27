@@ -1,9 +1,14 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ne">
 <head>
     <meta charset="UTF-8">
-    <title>सिर्जन भट्टराई | कविता सङ्ग्रह</title>
-   < style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>सिर्जन भट्टराई | साहित्यिक सङ्ग्रह</title>
+    
+    <!-- Icons and Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
         :root {
             --primary-color: #8e44ad;
             --secondary-color: #d35400;
@@ -11,6 +16,12 @@
             --card-bg: #ffffff;
             --text-color: #2c3e50;
             --light-text: #7f8c8d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
@@ -72,9 +83,12 @@
             color: var(--light-text);
             max-width: 600px;
             margin: 0 auto 20px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 4px;
         }
 
-        /* Category Tags Order */
         .poetry-tags {
             display: flex;
             justify-content: center;
@@ -92,7 +106,6 @@
             font-weight: 600;
         }
 
-        /* Social Media Icons */
         .profile-socials {
             display: flex;
             justify-content: center;
@@ -145,57 +158,11 @@
             margin: 0;
             line-height: 1.8;
         }
-       /* Add/Replace these rules in your <style> tag */
-
-* {
-    box-sizing: border-box;
-}
-
-.profile-card {
-    background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Prevents child elements from spilling out */
-    width: 100%;
-    max-width: 420px;
-    text-align: center;
-    margin: 20px auto;
-}
-
-/* Fixes the oversized photo */
-.profile-img-container {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: #fff;
-    padding: 4px;
-    margin: 0 auto;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    overflow: hidden; /* Clips the image inside the circle */
-}
-
-.profile-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover; /* Keeps image aspect ratio without stretching */
-    display: block;
-}
-       
-</style>
- 
+    </style>
 </head>
 <body>
-   
-    <div class="profile-header">
-        <div class="profile-img-container">
-            <!-- तपाईंको फोटोको लिङ्क यहाँ राख्नुहोला (src) -->
-            <img src="https://i.imgur.com/X7Ff8qT.jpeg" alt="सिर्जन भट्टराई" class="profile-img">
-        </div>
-    </div>
 
-    <div class="profile-body">
-     class="profile-card">
+    <div class="profile-card">
         <div class="profile-header">
             <div class="profile-img-container">
                 <img src="https://i.imgur.com/X7Ff8qT.jpeg" alt="सिर्जन भट्टराई" class="profile-img">
@@ -212,7 +179,6 @@
                 "कागजको पानामा मनका रङ्गहरू पोत्दै, भावनाका तरंगहरूलाई शब्दको मालामा उनेर एउटा आफ्नै संसार सिर्जना गर्ने प्रयास।"
             </p>
 
-            <!-- Tags ordered: Kabita first, then others -->
             <div class="poetry-tags">
                 <span class="tag"><i class="fas fa-pen-nib"></i> #कविता</span>
                 <span class="tag"><i class="fas fa-heart"></i> #शायरी</span>
@@ -228,12 +194,15 @@
             </div>
         </div>
     </div>
-    <!-- Content Sections Ordered: 1. Kabita, 2. Shayari, 3. Story, 4. Novel, 5. Mahakabya -->
+
+    <!-- Content Sections -->
+
+    <!-- 1. Kabita -->   <!-- Content Sections Ordered: 1. Kabita, 2. Shayari, 3. Story, 4. Novel, 5. Mahakabya -->
         
     
-    <h1>सिर्जन भट्टराईको कविता सङ्ग्रह</h1>
+    
         
-    <!-- 1. Poetry (कविता) Section -->
+    
     <div class="content-section">
     <!-- १ देखि २८ सम्म -->
     <div class="poem"><h2>१. मेरो भन्नु के छ र?</h2><pre> मेरो भनु के छ र,
